@@ -1,3 +1,4 @@
+import 'package:barbershop/pages/home.dart';
 import 'package:flutter/material.dart';
 
 class Onboarding extends StatefulWidget {
@@ -24,12 +25,21 @@ class _OnboardingState extends State<Onboarding> {
                 color: const Color(0xFFdf711a),
                 borderRadius: BorderRadius.circular(15),
               ),
-              child: const Text(
-                'Get a supercut',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 30,
-                  fontWeight: FontWeight.bold,
+              child: GestureDetector(
+                onTap: (){
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context)=> const  Home()),
+
+                  );
+                },
+                child: const Text(
+                  'Get a supercut',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 30,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ),
             )
